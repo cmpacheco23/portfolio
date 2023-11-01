@@ -7,3 +7,7 @@
   background-color: rgb(212, 226, 238);
 }
 
+.logos > img {
+  max-width: 40px;
+  max-height: 40px;
+}
