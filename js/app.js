@@ -18,3 +18,19 @@ experienceDivs.forEach((div) => {
     }
   });
 });
+
+const projectImages = document.querySelectorAll('.projectimg');
+
+projectImages.forEach((image) => {
+  const h1 = image.nextElementSibling; // Get the <h1> element following the image
+
+  image.addEventListener('error', () => {
+    image.style.display = 'none'; // Hide the image on error
+    h1.style.display = 'block'; // Show the <h1> on error
+  });
+
+  image.addEventListener('load', () => {
+    image.style.display = 'block'; // Show the image on load
+    h1.style.display = 'none'; // Hide the <h1> on load
+  });
+});
