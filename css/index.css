@@ -48,7 +48,33 @@ body > .navbar{
   justify-content: center;
   text-align: center;
 }
-.work{
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  max-width: 280px;
+}
+
+.experience .description {
+  display: none;
+  padding-top: 10px;
+}
+
+.experience .role,
+.experience .duration,
+.experience .company {
+  font-size: 16px;
+  margin: 5px 0; /* Add margin to space out the items */
+  text-align: center; /* Center align text */
+}
+
+
+.work {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -63,7 +89,8 @@ body > .navbar{
   margin-top: 5px;
 }
 
-.work p, h3 {
+.work p,
+.work h3 {
   text-align: center;
 }
 .skills{
@@ -98,4 +125,17 @@ body > .navbar{
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px; /* Adjust the gap between project cards */
+}
+
+.experience-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.arrow-icon{
+  width: 20px;
+  margin-top: 5px;
 }
