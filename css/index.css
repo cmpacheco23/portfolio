@@ -27,11 +27,11 @@ body > .navbar{
   color: #007bff; /* Change the color as needed */
 }
 
-.linkedin{
+.email{
   width: 40px;
 }
 
-.github{
+.github, .linkedin{
   width: 40px;
   margin-right: 15px;
 }
