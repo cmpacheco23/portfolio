@@ -145,6 +145,11 @@ body > .navbar{
   justify-content: center;
   align-items: center;
 }
+.github-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .button-86 {
   all: unset;
