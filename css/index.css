@@ -297,7 +297,10 @@ body > .navbar{
   transform-style: preserve-3d;
 }
 
-
+.skill-icon {
+  max-width: 60px; /* Set the maximum width for the image */
+  max-height: 60px; /* Set the maximum height for the image */
+}
 .skill-card i {
   font-size: 48px; /* Adjust the icon size */
   color: rgb(149, 53, 171), 0, 255; /* Icon color */
