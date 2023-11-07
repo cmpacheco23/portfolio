@@ -73,8 +73,7 @@ body > .navbar{
   text-align: center; /* Center align text */
 }
 
-
-.work {
+.work > section{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -93,10 +92,12 @@ body > .navbar{
 .work h3 {
   text-align: center;
 }
+
 .skills{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .contact{
   display: flex;
@@ -104,17 +105,19 @@ body > .navbar{
   align-items: center;
 }
 
-
 .projectimg {
   max-width: 100%;
   height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px; /* Adjust the gap between project cards */
+  gap: 20px;
+  max-width: 1200px;
 }
 
 .card-container {
@@ -124,6 +127,25 @@ body > .navbar{
   gap: 20px; /* Adjust the gap between cards */
   max-width: 1200px;
 }
+
+
+.card {
+  border-radius: 5px;
+  position: relative;
+  width: 250px;
+  height: 400px;
+  text-align: left;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: center;
+  backface-visibility: hidden;
+  border: 1px solid transparent; /* Set the border color to transparent */
+  margin: 10px; /* Add margin to create the colored margin */
+  padding: 20px;
+  border-right-color: red; /* Set the color for the right margin */
+}
+
 
 body{
   display: flex;
@@ -200,8 +222,7 @@ body > .navbar{
   text-align: center; /* Center align text */
 }
 
-
-.work {
+.work > section{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -220,10 +241,12 @@ body > .navbar{
 .work h3 {
   text-align: center;
 }
+
 .skills{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .contact{
   display: flex;
@@ -231,107 +254,83 @@ body > .navbar{
   align-items: center;
 }
 
-
 .projectimg {
   max-width: 100%;
   height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 70px; /* Adjust the gap between project cards */
+  gap: 20px;
+  max-width: 1200px;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px; /* Adjust the gap between cards */
   max-width: 1200px;
 }
+
 
 .card {
   border-radius: 5px;
   position: relative;
-  width: 200px;
-  height: 400px; /* Adjust the height and width as needed */
+  width: 250px;
+  height: 400px;
   text-align: left;
   perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
   transform-origin: center;
   backface-visibility: hidden;
-}
-
-
-.card:hover {
-  transform: rotateY(180deg);
-}
-.card .front {
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2f2;
-  transform: rotateY(0);
+  border: 1px solid transparent; /* Set the border color to transparent */
+  margin: 10px; /* Add margin to create the colored margin */
   padding: 20px;
-  position: absolute;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: transform 0.5s;
-  transform-origin: center;
+  border-right-color: red; /* Set the color for the right margin */
 }
-
-.card .back {
-  width: 100%;
-  height: 100%;
-  background-color: #d3d3d3;
-  transform: rotateY(180deg);
-  position: absolute;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: transform 0.5s;
-  transform-origin: center;
-}
-
-
-.card .front {
-  background-color: #f2f2f2;
-  transform: rotateY(0);
-  padding: 20px;
-}
-
-.card .back {
-  background-color: #d3d3d3;
-  transform: rotateY(180deg);
-}
-
 
 
 .card ul {
-  list-style: disc;
-  margin-left: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.card .technologies-title,
-.card .technologies,
-.card .technologies li {
-  display: none; /* Hide these elements by default */
+.card li {
+  flex: 0 0 calc(33.333% - 20px); /* Set a maximum of 3 items per line */
+  display: flex;
+  font-weight: bold;
+  margin-right: 10px; /* Add margin between items */
+  padding-left: 10px;
+
 }
 
-.card:hover .technologies-title,
-.card:hover .technologies,
-.card:hover .technologies li {
-  display: block; /* Display these elements on hover */
+
+/* New CSS for project cards */
+.projects.card {
+  border-radius: 5px;
+  position: relative;
+  width: 250px;
+  height: 400px;
+  text-align: left;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: center;
+  backface-visibility: hidden;
+  border: 1px solid transparent;
+  margin: 10px;
+  padding: 20px;
+  border-right-color: red;
 }
 
 
@@ -365,6 +364,15 @@ body > .navbar{
   margin-right: 10px; /* Adjust margin as needed */
 }
 
+.technologies-container {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+.arrow-icon{
+  width: 20px;
+  margin-top: 5px;
+}
 
 .button-86 {
   all: unset;
@@ -435,35 +443,21 @@ body > .navbar{
   transition: 0s;
   transform: translate(0, 5%);
 }
-
-.card .front {
-  background-color: #f2f2f2;
-  transform: rotateY(0);
+.projects.card {
+  border-radius: 5px;
+  position: relative;
+  width: 250px;
+  height: 400px;
+  text-align: left;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: center;
+  backface-visibility: hidden;
+  border: 1px solid transparent;
+  margin: 10px;
   padding: 20px;
-}
-
-.card .back {
-  background-color: #d3d3d3;
-  transform: rotateY(180deg);
-}
-
-
-
-.card ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-
-.card .technologies-title,
-.card .technologies,
-.card .technologies li {
-  display: none; /* Hide these elements by default */
-}
-
-.card:hover .technologies-title,
-.card:hover .technologies,
-.card:hover .technologies li {
-  display: block; /* Display these elements on hover */
+  border-right-color: red;
 }
 
 
@@ -485,10 +479,26 @@ body > .navbar{
   justify-content: center;
   align-items: center;
 }
+
 .github-logo-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.github {
+  width: 40px;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.technologies-container {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+.arrow-icon{
+  width: 20px;
+  margin-top: 5px;
 }
 
 .button-86 {
@@ -559,4 +569,29 @@ body > .navbar{
 .button-86:active::after {
   transition: 0s;
   transform: translate(0, 5%);
+}
+
+.icon-list {
+  max-width: 1000px;
+}
+
+.skills .icon-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align items horizontally */
+  align-items: center; /* Center align items vertically */
+}
+
+.skills .icon-list li {
+  margin-bottom: 10px; /* Adjust spacing between items */
+  flex: 0 0 calc(24% - 10px); /* Create up to 4 columns with spacing and reduce width */
+  max-width: calc(24% - 10px); /* Set the maximum width to the same value */
+  font-size: 22px;
+}
+
+.skills .icon-list i {
+  margin-right: 10px; /* Add spacing between the icon and text */
 }

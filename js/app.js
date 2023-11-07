@@ -34,3 +34,12 @@ projectImages.forEach((image) => {
     h1.style.display = 'none'; // Hide the <h1> on load
   });
 });
+
+const iconList = document.querySelector('.icon-list');
+const listItems = iconList.querySelectorAll('li');
+const itemsPerRow = 5; // Number of items you want per row
+
+for (let i = listItems.length; i % itemsPerRow !== 0; i++) {
+  const emptyLi = document.createElement('li');
+  listItems[listItems.length - 1].parentNode.appendChild(emptyLi);
+}
