@@ -43,11 +43,27 @@ body > .navbar{
   margin-right: 15px;
 }
 
-.hero{
+.hero {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  margin: 40px;
 }
+
+.left-column {
+  flex: 1; /* Take up available space */
+  padding: 30px; /* Add spacing around the content */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.right-column {
+  flex: 1; /* Take up available space */
+  padding: 30px; /* Add spacing around the content */
+  text-align: center;
+}
+
 .about{
   display: flex;
   flex-direction: column;
@@ -226,20 +242,6 @@ body > .navbar{
   margin-right: 15px;
 }
 
-.hero{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-
 .work h1 {
   text-align: center;
   margin-top: 5px;
@@ -330,7 +332,7 @@ body > .navbar{
   border: 1px solid transparent;
   margin: 10px;
   padding: 20px;
-  box-shadow: rgba(192, 138, 223, 0.7) 0px 0px 20px, rgba(228, 40, 222, 0.579) 0px 0px 30px;
+  box-shadow: rgba(192, 138, 223, 0.7) 0px 0px 20px, rgba(97, 17, 94, 0.579) 0px 0px 30px;
   overflow: hidden; /* Clip overflowing content */
 }
 
@@ -344,7 +346,7 @@ body > .navbar{
 
 .projects.card .bottom-half {
   height: 65%; /* Adjust the height of the bottom half accordingly */
-  background: linear-gradient(to bottom, #d2a4e6 0%, rgb(205, 125, 203) 100%); /* Pastel green to pastel teal */
+  background: linear-gradient(to bottom, #d8b1e9cc 0%, rgba(240, 185, 238, 0.86) 100%); /* Pastel green to pastel teal */
 
   background-blend-mode: multiply;
   border-bottom-left-radius: 5px;
@@ -592,7 +594,7 @@ body > .navbar{
 
 .carla {
   border-radius: 50%;
-  width: 200px;
+  width: 150px;
 }
 
 p {
