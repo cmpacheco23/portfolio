@@ -595,3 +595,8 @@ body > .navbar{
 .skills .icon-list i {
   margin-right: 10px; /* Add spacing between the icon and text */
 }
+
+.carla {
+  border-radius: 50%;
+  width: 200px;
+}
