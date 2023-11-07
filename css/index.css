@@ -104,16 +104,6 @@ body > .navbar{
   align-items: center;
 }
 
-.card {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  max-width: 270px; /* Adjust the width as needed */
-  text-align: left;
-}
 
 .projectimg {
   max-width: 100%;
@@ -124,8 +114,358 @@ body > .navbar{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adjust the gap between project cards */
+  gap: 50px; /* Adjust the gap between project cards */
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between cards */
+  max-width: 1200px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 25px
+}
+
+body > .navbar{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 80%;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  background-color: rgb(212, 226, 238);
+}
+
+.navbar a:hover {
+  color: #007bff; /* Change the color as needed */
+}
+
+.email{
+  width: 40px;
+}
+
+.github, .linkedin{
+  width: 40px;
+  margin-right: 15px;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  max-width: 280px;
+}
+
+.experience .description {
+  display: none;
+  padding-top: 10px;
+}
+
+.experience .role,
+.experience .duration,
+.experience .company {
+  font-size: 16px;
+  margin: 5px 0; /* Add margin to space out the items */
+  text-align: center; /* Center align text */
+}
+
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.work h1 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.work p,
+.work h3 {
+  text-align: center;
+}
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.projectimg {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px; /* Adjust the gap between project cards */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 5px;
+  position: relative;
+  width: 200px;
+  height: 400px; /* Adjust the height and width as needed */
+  text-align: left;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .front {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  transform: rotateY(0);
+  padding: 20px;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  transform-origin: center;
+}
+
+.card .back {
+  width: 100%;
+  height: 100%;
+  background-color: #d3d3d3;
+  transform: rotateY(180deg);
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  transform-origin: center;
+}
+
+
+.card .front {
+  background-color: #f2f2f2;
+  transform: rotateY(0);
+  padding: 20px;
+}
+
+.card .back {
+  background-color: #d3d3d3;
+  transform: rotateY(180deg);
+}
+
+
+
+.card ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.card .technologies-title,
+.card .technologies,
+.card .technologies li {
+  display: none; /* Hide these elements by default */
+}
+
+.card:hover .technologies-title,
+.card:hover .technologies,
+.card:hover .technologies li {
+  display: block; /* Display these elements on hover */
+}
+
+
+.experience-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.arrow-icon{
+  width: 20px;
+  margin-top: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github {
+  width: 40px;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+
+.button-86 {
+  all: unset;
+  width: 80px;
+  height: 20px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 8px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #2a2a2d;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #953ca2a8;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+.card .front {
+  background-color: #f2f2f2;
+  transform: rotateY(0);
+  padding: 20px;
+}
+
+.card .back {
+  background-color: #d3d3d3;
+  transform: rotateY(180deg);
+}
+
+
+
+.card ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.card .technologies-title,
+.card .technologies,
+.card .technologies li {
+  display: none; /* Hide these elements by default */
+}
+
+.card:hover .technologies-title,
+.card:hover .technologies,
+.card:hover .technologies li {
+  display: block; /* Display these elements on hover */
+}
+
 
 .experience-container{
   display: flex;
