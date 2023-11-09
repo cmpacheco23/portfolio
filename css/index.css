@@ -1,10 +1,15 @@
+@font-face {
+  font-family: 'HP';
+  src: url('../public/Hpposter-xxDV.ttf') format('truetype');
+}
+
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to top, #FAACA8 0%, #FAACA8 50%, #DDD6F3 50%, #DDD6F3 100%);
+  background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
 }
 
 body > .navbar{
@@ -22,7 +27,6 @@ body > .navbar{
   padding: 15px;
   background-color: rgb(212, 226, 238);
 }
-
 .navbar a:hover {
   color: #007bff; /* Change the color as needed */
 }
@@ -40,7 +44,9 @@ body > .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px;
+  margin: 20px;
+  width: 80%;
+  
 }
 
 .left-column {
@@ -49,12 +55,19 @@ body > .navbar{
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-family: 'HP', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .right-column {
   flex: 1; /* Take up available space */
   padding: 30px; /* Add spacing around the content */
   text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .about{
@@ -63,6 +76,10 @@ body > .navbar{
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 100%;
+  
+  padding-bottom: 35px;
+  padding-top: 30px;
 }
 
 .experience-container {
@@ -78,17 +95,27 @@ body > .navbar{
   align-items: center;
   margin: 10px;
   padding: 20px;
-  border: 1px solid #ccc;
-  background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+  border: 2px black;
+  background-image: linear-gradient(-20deg, #77438c 0%, #634376 100%);
   max-width: 980px;
   width: 100%;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .experience .description {
   display: none;
   padding-top: 10px;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: white;
+  background-color: #d7a9d753;
+  line-height: 22px;
+  text-align: center;
+  padding: 10px;
+  text-shadow: .7px 1px 1px rgba(37, 36, 36, 0.708);
 }
+
 
 .experience .content {
   display: flex;
@@ -97,19 +124,24 @@ body > .navbar{
   gap: 10px; /* Adjust the gap to your preference */
   padding: 10px;
   margin: 5px;
+  font-family: 'Lora', serif;
 }
 
 .experience .role,
 .experience .duration,
 .experience .company {
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
   flex: 1;
+  color: white;
+  font-family: 'Lora', serif;
+  text-shadow: .7px 1px 1px rgba(37, 36, 36, 0.831);
+  font-size: 16px;
 }
 
 .experience .top-experience {
   display: flex;
-  width: 90%;
+  width: 95%;
   align-items: center;
 }
 
@@ -123,6 +155,11 @@ body > .navbar{
   margin-top: 5px;
 }
 
+.title{
+  font-family: 'HP', sans-serif;
+  font-size: 55px;
+  letter-spacing: 3.5px;
+}
 
 
 .work > section{
@@ -133,6 +170,9 @@ body > .navbar{
   align-items: center;
   padding: 20px;
   max-width: 1200px;
+  width: 100%;
+  padding-bottom: 35px;
+  padding-top: 30px;
 }
 
 .work h1 {
@@ -239,12 +279,18 @@ body > .navbar{
   text-align: center;
 }
 
-.skills{
+.skills {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /* background-color: #cfc7f8; */
+  /* box-shadow: 1px 3px 6px rgba(125, 59, 137, 0.582); */
+  margin-bottom: 30px;
+  padding-bottom: 35px;
+  padding-top: 30px;
 }
+
 
 .icon-list {
   max-width: 1000px;
@@ -276,7 +322,7 @@ body > .navbar{
 .skill-card {
   width: 100px;
   height: 100px;
-  background: #f3c4f2;
+  background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -288,6 +334,7 @@ body > .navbar{
   cursor: pointer;
   transition: transform 0.3s;
   transform-style: preserve-3d;
+  box-shadow: rgba(13, 10, 15, 0.514) 0px 0px 15px, rgba(81, 75, 80, 0.407) 0px 0px 20px;
 }
 
 .skill-icon {
@@ -330,6 +377,9 @@ body > .navbar{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 35px;
+  padding-top: 30px;
 }
 
 .project-container {
@@ -398,9 +448,9 @@ body > .navbar{
   border: 1px solid transparent;
   margin: 10px;
   padding: 20px;
-  box-shadow: rgba(192, 138, 223, 0.7) 0px 0px 20px, rgba(97, 17, 94, 0.579) 0px 0px 30px;
+  box-shadow: rgba(94, 55, 117, 0.7) 0px 0px 16px, rgba(97, 17, 94, 0.412) 0px 0px 20px;
   overflow: hidden; /* Clip overflowing content */
-  background-color: #e7a2e189;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 .projects.card .top-half {
@@ -555,7 +605,10 @@ body > .navbar{
 .github {
   width: 40px;
   margin-right: 10px; /* Adjust margin as needed */
+  box-shadow: 1px 1px 2px 2px rgba(36, 36, 36, 0.47);
+  border-radius: 50%;
 }
+
 
 .technologies-container {
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
