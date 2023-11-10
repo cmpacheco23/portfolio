@@ -159,6 +159,7 @@ body > .navbar{
   font-family: 'HP', sans-serif;
   font-size: 55px;
   letter-spacing: 3.5px;
+  margin-top: 0;
 }
 
 
@@ -177,7 +178,7 @@ body > .navbar{
 
 .work h1 {
   text-align: center;
-  margin-top: 5px;
+  margin-bottom: 35px;
 }
 
 .work p,
@@ -202,6 +203,7 @@ body > .navbar{
   justify-content: center;
   gap: 20px;
   max-width: 1200px;
+  padding-bottom: 35px;
 }
 
 
@@ -289,7 +291,7 @@ body > .navbar{
   /* box-shadow: 1px 3px 6px rgba(125, 59, 137, 0.582); */
   margin-bottom: 30px;
   padding-bottom: 35px;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 
 
@@ -391,10 +393,7 @@ body > .navbar{
   max-width: 1200px;
 }
 
-.project-title{
-  font-family: 'Lora', serif;
-  font-size: 20px;
-}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -636,4 +635,21 @@ p {
 
 body, .navbar, .email, .github, .linkedin, .experience, .work, .skills, .contact, .projects.card {
   color: #2A2A2D; /* Dark gray text color */
+}
+
+.lottie{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.project-title{
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.logos{
+  margin-top: 25px;
 }
