@@ -6,7 +6,7 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
@@ -16,19 +16,40 @@ body > .navbar{
   display: flex;
   flex-direction: row;
   height: 100%;
-  width: 80%;
+  width: 100%;
 }
 
+nav{
+  width: 100%;
+}
 .navbar{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 10px;
   padding: 15px;
-  background-color: rgb(212, 226, 238);
+  background-image: linear-gradient(-20deg, #4e295d 0%, #4c1a68 100%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
+.navbar a {
+  color: #fcfafb;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #560d2559; /* Add border style and width */
+  width: 80px;
+  text-align: center;
+  background-color: rgba(179, 29, 87, 0.765);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+  letter-spacing: 1.5px;
+}
+
+
 .navbar a:hover {
-  color: #007bff; /* Change the color as needed */
+  color: #ffffff; /* Change the color as needed */
 }
 
 .email{
@@ -234,35 +255,6 @@ body > .navbar{
   font-family: 'Lora', serif;
 }
 
-
-body{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 25px
-}
-
-body > .navbar{
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 80%;
-}
-
-.navbar{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 10px;
-  padding: 15px;
-  background-color: rgb(212, 226, 238);
-}
-
-.navbar a:hover {
-  color: #007bff; /* Change the color as needed */
-}
 
 .email{
   width: 40px;
